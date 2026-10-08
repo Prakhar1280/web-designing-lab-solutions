@@ -3,110 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio - Web Design Lab</title>
+    <title>Prakhar | CS & DS Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Header & Boxed Navigation -->
     <header>
-        <h1>Prakhar | CS - Data Science Student</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <div class="brand">Prakhar<span>.dev</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="nav-box">About</a></li>
+                    <li><a href="#education" class="nav-box">Education</a></li>
+                    <li><a href="#skills" class="nav-box">Skills</a></li>
+                    <li><a href="#projects" class="nav-box">Projects</a></li>
+                    <li><a href="#contact" class="nav-box">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero / About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my personal portfolio webpage! I am a Computer Science & Data Science undergraduate student passionate about web development, data analysis, and building full-stack applications.</p>
+    <main class="main-container">
+        
+        <!-- Hero Section -->
+        <section id="about" class="card hero-section">
+            <div class="hero-content">
+                <span class="badge">Computer Science & Data Science</span>
+                <h1>Hi, I'm Prakhar 👋</h1>
+                <p class="lead">Undergraduate focused on database architecture, system environments, and modern web application development. Building scalable, performant software with modern toolchains.</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Code editor screen background">
+            </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Degree / Course</th>
-                        <th>Institution / University</th>
-                        <th>Year</th>
-                        <th>Specialization</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>B.Tech</td>
-                        <td>AKTU University</td>
-                        <td>2022 - 2026</td>
-                        <td>Computer Science & Data Science</td>
-                    </tr>
-                    <tr>
-                        <td>Higher Secondary (12th)</td>
-                        <td>CBSE Board</td>
-                        <td>2022</td>
-                        <td>Science (PCM)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Languages:</strong> C++, Python, JavaScript, HTML5, CSS3</li>
-                <li><strong>Frameworks & Tools:</strong> Git/GitHub, Bootstrap, Node.js, Express.js</li>
-                <li><strong>Database:</strong> MongoDB, SQL</li>
-            </ul>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
+        <!-- Education Section with Institution Visuals -->
+        <section id="education" class="card">
+            <h2>Education Timeline</h2>
             
-            <article>
-                <h3>1. Web Designing Lab Repository</h3>
-                <p>A comprehensive repository hosting solutions and deployed static pages for all 12 Web Design Lab experiments.</p>
-                <p><strong>Tech Stack:</strong> Git, GitHub Pages, HTML5, CSS3, JavaScript</p>
-            </article>
+            <div class="edu-grid">
+                <!-- B.Tech Card -->
+                <div class="edu-card">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="University Campus Building">
+                    <div class="edu-details">
+                        <span class="year-badge">2025 – 2029</span>
+                        <h3>B.Tech in Computer Science & Data Science</h3>
+                        <h4>JSS University, Noida</h4>
+                        <p>Specializing in core computer science, relational database engineering, and algorithmic data structures.</p>
+                    </div>
+                </div>
 
-            <article>
-                <h3>2. Personal Portfolio Site</h3>
-                <p>A responsive, semantic single-page personal portfolio showcasing skills, projects, and educational credentials.</p>
-                <p><strong>Tech Stack:</strong> HTML5, CSS3, Bootstrap</p>
-            </article>
+                <!-- Class 12th Card -->
+                <div class="edu-card">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="High School Graduation Library">
+                    <div class="edu-details">
+                        <span class="year-badge">2024</span>
+                        <h3>Class 12th (Senior Secondary)</h3>
+                        <h4>CBSE Board</h4>
+                        <p>Completed higher secondary education with a major focus on Physics, Chemistry, and Mathematics.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+<!-- Technical Skills Section with Images -->
+        <section id="skills" class="card">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                
+                <!-- Databases Card -->
+                <div class="skill-card">
+                    <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=600&q=80" alt="Database Visualization">
+                    <div class="skill-card-body">
+                        <h3>Databases</h3>
+                        <div class="tag-container">
+                            <span class="skill-tag highlighted">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+                <!-- Systems & Environments Card -->
+                <div class="skill-card">
+                    <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=600&q=80" alt="Linux Terminal Workspace">
+                    <div class="skill-card-body">
+                        <h3>Systems & Tools</h3>
+                        <div class="tag-container">
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">LaTeX</span>
+                            <span class="skill-tag">Git / GitHub</span>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" placeholder="Your message here..." required></textarea><br><br>
+                <!-- Web Development Card -->
+                <div class="skill-card">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Web Development Interface">
+                    <div class="skill-card-body">
+                        <h3>Web Engineering</h3>
+                        <div class="tag-container">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
 
-                <button type="submit">Send Message</button>
-            </form>
+            </div>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <hr>
-        <p>&copy; 2026 Prakhar. All Rights Reserved. | Web Designing Lab (JCS 308)</p>
-    </footer>
-
-</body>
-</html>

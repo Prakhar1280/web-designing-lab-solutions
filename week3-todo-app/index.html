@@ -3,18 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiment 3: Dynamic To-Do List App</title>
+    <title>Prakhar To Do | Focus from Work to Play</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="todo-card">
-        <h2>Task Manager</h2>
-        <form id="todo-form">
-            <input type="text" id="task-input" placeholder="Add a new task..." required>
-            <button type="submit" id="add-btn">Add Task</button>
-        </form>
-        <ul id="task-list"></ul>
+
+    <!-- Microsoft 365 style top announcement banner -->
+    <div class="promo-bar">
+        <div class="promo-content">
+            <span class="promo-badge"><i class="fa-solid fa-sparkles"></i> Prakhar Workspace</span>
+            <span>Boost your everyday productivity with structured task management and focus lists.</span>
+        </div>
+        <a href="#app" class="btn-promo">Try It Now</a>
     </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <span class="brand-name">Prakhar <strong>To Do</strong></span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#app">My Tasks</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="#app" class="btn-primary-sm">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section inspired by Microsoft To Do -->
+    <section class="hero">
+        <div class="hero-container">
+            
+            <!-- Left Character Illustration -->
+            <div class="hero-illustration left">
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/man-working-on-laptop-illustration-download-in-svg-png-gif-file-formats--task-management-workspace-business-pack-illustrations-5858692.png?f=webp&h=600" alt="Work Task Management Illustration" onerror="this.onerror=null; this.src='https://illustrations.popsy.co/amber/man-with-laptop.svg';">
+                <div class="check-bubble b1"><i class="fa-solid fa-check"></i></div>
+                <div class="check-bubble b2"><i class="fa-solid fa-check"></i></div>
+            </div>
+
+            <!-- Central Hero Call to Action -->
+            <div class="hero-main">
+                <div class="hero-icon">
+                    <i class="fa-solid fa-check-double"></i>
+                </div>
+                <h1>Prakhar To Do</h1>
+                <p class="tagline">To Do gives you focus, from work to play.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#app" class="btn-primary">Get started</a>
+                    <a href="#features" class="btn-secondary">Learn more</a>
+                </div>
+            </div>
+
+            <!-- Right Character Illustration -->
+            <div class="hero-illustration right">
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-checking-completed-tasks-illustration-download-in-svg-png-gif-file-formats--checklist-todo-list-planning-pack-design-development-illustrations-6430335.png?f=webp&h=600" alt="Completed Tasks Check-off Illustration" onerror="this.onerror=null; this.src='https://illustrations.popsy.co/amber/woman-checking-completed-tasks.svg';">
+                <div class="check-bubble b3"><i class="fa-solid fa-check"></i></div>
+                <div class="check-bubble b4"><i class="fa-solid fa-check"></i></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive To-Do Application Widget Section -->
+    <section id="app" class="app-section">
+        <div class="app-container">
+            
+            <div class="app-header">
+                <div class="title-wrap">
+                    <i class="fa-solid fa-sun"></i>
+                    <div>
+                        <h2>My Day</h2>
+                        <span class="current-date" id="currentDate">Thursday, October 8</span>
+                    </div>
+                </div>
+                <span class="task-counter" id="taskCounter">0 Tasks Remaining</span>
+            </div>
+
+            <!-- Add Task Bar -->
+            <form id="todoForm" class="todo-input-form">
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-plus input-icon"></i>
+                    <input type="text" id="taskInput" placeholder="Add a task (e.g., Complete Experiment 3 for Lab)" required>
+                </div>
+                <button type="submit" class="btn-add"><i class="fa-solid fa-arrow-up"></i> Add</button>
+            </form>
+
+            <!-- Active Task List -->
+            <div class="task-list-wrapper">
+                <ul id="taskList" class="task-list">
+                    <!-- Tasks will be dynamically rendered here -->
+                </ul>
+                <div id="emptyState" class="empty-state">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <p>All caught up! Add a new task above to start your day.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Showcase Cards -->
+    <section id="features" class="features-section">
+        <div class="section-container">
+            <h2 class="section-title">Stay Organized & Connected</h2>
+            <div class="features-grid">
+                
+                <div class="feature-card">
+                    <div class="f-icon blue"><i class="fa-solid fa-sun"></i></div>
+                    <h3>Smart Daily Planner</h3>
+                    <p>Set yourself up for success with My Day, intelligent suggestions to update your daily to-do list.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="f-icon teal"><i class="fa-solid fa-list-check"></i></div>
+                    <h3>Manage Anywhere</h3>
+                    <p>Access your tasks across devices, keeping you focused whether you're at your desk or on the go.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="f-icon purple"><i class="fa-solid fa-share-nodes"></i></div>
+                    <h3>Sharing Made Easy</h3>
+                    <p>Share lists with friends, family, and colleagues to stay synced on joint projects and assignments.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Prakhar To Do</span>
+            </div>
+            <p>&copy; 2026 Prakhar | Experiment 3 - To-Do List Application</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

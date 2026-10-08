@@ -1,151 +1,415 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechInsights Blog - Bootstrap & Media Queries</title>
-    <!-- Bootstrap 5 CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Whisker World - Cute Cat Blog</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+
         <div class="container">
-            <a class="navbar-brand fw-bold text-info" href="#">TechInsights</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+            <a class="navbar-brand fw-bold" href="#">
+                🐾 Whisker World
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
+
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#featured">Featured</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#featured">
+                            Featured
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#articles">
+                            Cat Stories
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">
+                            Categories
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
     </nav>
 
-    <!-- Main Container -->
+
+    <!-- ================= MAIN CONTENT ================= -->
+
     <main class="container my-4">
 
-        <!-- Hero Featured Post Banner -->
-        <section id="featured" class="p-4 p-md-5 mb-4 rounded text-white bg-dark hero-banner">
-            <div class="col-md-8 px-0">
-                <span class="badge bg-info text-dark mb-2 fs-6">Featured Article</span>
-                <h1 class="display-5 fw-bold text-light">The Future of Web Development & Data Science</h1>
-                <p class="lead my-3 text-light-50">Exploring how AI models, client-side frameworks, and responsive grid layouts are changing the landscape of web engineering.</p>
-                <a href="#" class="btn btn-info fw-bold">Read Full Post &rarr;</a>
+
+        <!-- ================= HERO ================= -->
+
+        <section
+            id="featured"
+            class="hero-banner p-4 p-md-5 mb-5 rounded"
+        >
+
+            <div class="col-lg-8">
+
+                <span class="badge featured-badge mb-3">
+                    🐱 Featured Cat Story
+                </span>
+
+                <h1 class="display-5 fw-bold">
+                    Life Is Better With Cats! 🐾
+                </h1>
+
+                <p class="lead my-3">
+                    Welcome to Whisker World — a cozy little corner
+                    of the internet dedicated to adorable cats,
+                    funny cat moments and everything that makes
+                    our furry friends special.
+                </p>
+
+                <a
+                    href="#articles"
+                    class="btn btn-dark fw-bold"
+                >
+                    Explore Cat Stories →
+                </a>
+
             </div>
+
         </section>
 
-        <!-- Main Blog Grid + Sidebar Layout -->
+
+        <!-- ================= BLOG + SIDEBAR ================= -->
+
         <div class="row g-5" id="articles">
-            
-            <!-- Articles Grid Column -->
+
+
+            <!-- ================= BLOG POSTS ================= -->
+
             <div class="col-lg-8">
-                <h3 class="pb-2 mb-4 border-bottom border-2 border-info text-dark">Latest Blog Posts</h3>
+
+                <h3 class="section-title pb-2 mb-4">
+                    🐾 Latest Cat Stories
+                </h3>
+
 
                 <div class="row row-cols-1 row-cols-md-2 g-4">
-                    
-                    <!-- Article Card 1 -->
+
+
+                    <!-- ================= CARD 1 ================= -->
+
                     <div class="col">
-                        <div class="card h-100 shadow-sm border-0 blog-card">
+
+                        <div class="card h-100 blog-card shadow-sm border-0">
+
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/brandon-whitman-orlin/cats/images/cat1.jpg"
+                                class="card-img-top cat-photo"
+                                alt="Cute calico cat"
+                            >
+
                             <div class="card-body">
-                                <span class="badge bg-secondary mb-2">CSS Grid & Flexbox</span>
-                                <h5 class="card-title fw-bold">Mastering Modern CSS Layouts</h5>
-                                <p class="card-text text-muted">A step-by-step guide to building flexible, fluid page layouts without relying heavily on third-party frameworks.</p>
+
+                                <span class="badge bg-warning text-dark mb-2">
+                                    Cute Cats
+                                </span>
+
+                                <h5 class="card-title fw-bold">
+                                    Why Do Cats Purr?
+                                </h5>
+
+                                <p class="card-text text-muted">
+                                    Discover why cats make their adorable
+                                    purring sound and what they may be
+                                    trying to tell us.
+                                </p>
+
                             </div>
-                            <div class="card-footer bg-transparent border-0 pb-3">
-                                <small class="text-muted">Published: Oct 2026 • 5 min read</small>
+
+                            <div class="card-footer bg-transparent border-0">
+
+                                <small class="text-muted">
+                                    Published: Oct 2026 • 4 min read
+                                </small>
+
                             </div>
+
                         </div>
+
                     </div>
 
-                    <!-- Article Card 2 -->
+
+                    <!-- ================= CARD 2 ================= -->
+
                     <div class="col">
-                        <div class="card h-100 shadow-sm border-0 blog-card">
+
+                        <div class="card h-100 blog-card shadow-sm border-0">
+
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/brandon-whitman-orlin/cats/images/cat2.jpg"
+                                class="card-img-top cat-photo"
+                                alt="Grey and white cat"
+                            >
+
                             <div class="card-body">
-                                <span class="badge bg-primary mb-2">Bootstrap 5</span>
-                                <h5 class="card-title fw-bold">Why Bootstrap Still Matters</h5>
-                                <p class="card-text text-muted">How utility classes and responsive breakpoints speed up mobile-first frontend prototyping.</p>
+
+                                <span class="badge bg-info text-dark mb-2">
+                                    Cat Behaviour
+                                </span>
+
+                                <h5 class="card-title fw-bold">
+                                    Understanding Cat Meows
+                                </h5>
+
+                                <p class="card-text text-muted">
+                                    From tiny squeaks to loud meows,
+                                    learn about some of the interesting
+                                    ways cats communicate with humans.
+                                </p>
+
                             </div>
-                            <div class="card-footer bg-transparent border-0 pb-3">
-                                <small class="text-muted">Published: Sep 2026 • 4 min read</small>
+
+                            <div class="card-footer bg-transparent border-0">
+
+                                <small class="text-muted">
+                                    Published: Oct 2026 • 5 min read
+                                </small>
+
                             </div>
+
                         </div>
+
                     </div>
 
-                    <!-- Article Card 3 -->
+
+                    <!-- ================= CARD 3 ================= -->
+
                     <div class="col">
-                        <div class="card h-100 shadow-sm border-0 blog-card">
+
+                        <div class="card h-100 blog-card shadow-sm border-0">
+
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/brandon-whitman-orlin/cats/images/cat3.jpg"
+                                class="card-img-top cat-photo"
+                                alt="Sleeping cute cat"
+                            >
+
                             <div class="card-body">
-                                <span class="badge bg-success mb-2">JavaScript</span>
-                                <h5 class="card-title fw-bold">Understanding DOM Events</h5>
-                                <p class="card-text text-muted">Learn how event listeners and asynchronous JS calls bring static web pages to life.</p>
+
+                                <span class="badge bg-danger mb-2">
+                                    Cat Love
+                                </span>
+
+                                <h5 class="card-title fw-bold">
+                                    10 Things Cats Absolutely Love
+                                </h5>
+
+                                <p class="card-text text-muted">
+                                    Warm blankets, sunny windows and
+                                    plenty of attention — here are some
+                                    things that can make a cat's day.
+                                </p>
+
                             </div>
-                            <div class="card-footer bg-transparent border-0 pb-3">
-                                <small class="text-muted">Published: Aug 2026 • 6 min read</small>
+
+                            <div class="card-footer bg-transparent border-0">
+
+                                <small class="text-muted">
+                                    Published: Sep 2026 • 6 min read
+                                </small>
+
                             </div>
+
                         </div>
+
                     </div>
 
-                    <!-- Article Card 4 -->
+
+                    <!-- ================= CARD 4 ================= -->
+
                     <div class="col">
-                        <div class="card h-100 shadow-sm border-0 blog-card">
+
+                        <div class="card h-100 blog-card shadow-sm border-0">
+
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/brandon-whitman-orlin/cats/images/cat4.jpg"
+                                class="card-img-top cat-photo"
+                                alt="Orange tabby cat"
+                            >
+
                             <div class="card-body">
-                                <span class="badge bg-warning text-dark mb-2">Version Control</span>
-                                <h5 class="card-title fw-bold">Git & GitHub Best Practices</h5>
-                                <p class="card-text text-muted">A beginner-friendly workflow guide to managing repositories and deploying via GitHub Pages.</p>
+
+                                <span class="badge bg-success mb-2">
+                                    Cat Life
+                                </span>
+
+                                <h5 class="card-title fw-bold">
+                                    The Sleepy Life of a Cat
+                                </h5>
+
+                                <p class="card-text text-muted">
+                                    Why do cats sleep so much? Explore
+                                    the fascinating and wonderfully lazy
+                                    sleeping habits of our furry companions.
+                                </p>
+
                             </div>
-                            <div class="card-footer bg-transparent border-0 pb-3">
-                                <small class="text-muted">Published: Jul 2026 • 3 min read</small>
+
+                            <div class="card-footer bg-transparent border-0">
+
+                                <small class="text-muted">
+                                    Published: Sep 2026 • 3 min read
+                                </small>
+
                             </div>
+
                         </div>
+
                     </div>
 
                 </div>
+
             </div>
 
-            <!-- Sidebar Column -->
+
+            <!-- ================= SIDEBAR ================= -->
+
             <aside class="col-lg-4" id="categories">
-                <div class="position-sticky" style="top: 5rem;">
-                    
-                    <!-- About Sidebar Widget -->
-                    <div class="p-4 mb-3 bg-light rounded shadow-sm">
-                        <h4 class="fw-bold">About the Author</h4>
-                        <p class="mb-0 text-muted">Prakhar is a Computer Science & Data Science student documenting web development lab experiments and tech tutorials.</p>
+
+                <div class="position-sticky sidebar">
+
+
+                    <!-- ABOUT -->
+
+                    <div class="sidebar-box p-4 mb-4 rounded shadow-sm">
+
+                        <h4 class="fw-bold">
+                            😸 About Whisker World
+                        </h4>
+
+                        <p class="mb-0 text-muted">
+                            Whisker World is a fun blog dedicated to
+                            cute cats, funny stories and the wonderful
+                            world of our furry friends.
+                        </p>
+
                     </div>
 
-                    <!-- Categories Widget -->
-                    <div class="p-4 mb-3 bg-white rounded shadow-sm border">
-                        <h4 class="fw-bold border-bottom pb-2">Categories</h4>
-                        <ol class="list-unstyled mb-0">
-                            <li class="py-1"><a href="#" class="text-decoration-none text-dark">Web Design & CSS (4)</a></li>
-                            <li class="py-1"><a href="#" class="text-decoration-none text-dark">Bootstrap & UI Frameworks (2)</a></li>
-                            <li class="py-1"><a href="#" class="text-decoration-none text-dark">JavaScript & DOM (3)</a></li>
-                            <li class="py-1"><a href="#" class="text-decoration-none text-dark">Git & Deployment (2)</a></li>
-                        </ol>
+
+                    <!-- CATEGORIES -->
+
+                    <div class="sidebar-box p-4 rounded shadow-sm">
+
+                        <h4 class="fw-bold border-bottom pb-2">
+                            🐾 Categories
+                        </h4>
+
+                        <ul class="list-unstyled mb-0">
+
+                            <li class="py-2">
+                                <a href="#">
+                                    😻 Cute Cats (5)
+                                </a>
+                            </li>
+
+                            <li class="py-2">
+                                <a href="#">
+                                    🐱 Cat Behaviour (4)
+                                </a>
+                            </li>
+
+                            <li class="py-2">
+                                <a href="#">
+                                    ❤️ Cat Love (3)
+                                </a>
+                            </li>
+
+                            <li class="py-2">
+                                <a href="#">
+                                    😴 Cat Life (6)
+                                </a>
+                            </li>
+
+                        </ul>
+
                     </div>
 
                 </div>
+
             </aside>
 
         </div>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer text-center py-4 mt-5">
+
         <div class="container">
-            <p class="mb-0">&copy; 2026 TechInsights Blog | Designed by Prakhar (JCS 308)</p>
+
+            <p class="mb-1 fw-bold">
+                🐾 Whisker World
+            </p>
+
+            <p class="mb-0">
+                © 2026 Whisker World | Designed by Prakhar
+            </p>
+
         </div>
+
     </footer>
 
-    <!-- Bootstrap 5 JavaScript Bundle CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ================= IMAGE ATTRIBUTION ================= -->
+
+    <div class="text-center small text-muted py-2">
+        Cat photographs sourced from free-to-use Pexels/CC0 collections.
+    </div>
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
+
 </html>

@@ -1,42 +1,227 @@
-/* Custom Global Adjustments */
+/* =========================================
+   GLOBAL STYLES
+   ========================================= */
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8fafc;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff8f5;
+    color: #333;
 }
 
-/* Hero Featured Banner Styling */
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+    background-color: #6f4e37;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.4rem;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #ffd6a5 !important;
+}
+
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
 .hero-banner {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    border-left: 5px solid #0dcaf0;
+    background: linear-gradient(
+        135deg,
+        #ffd6a5 0%,
+        #ffb4a2 100%
+    );
+
+    border-left: 6px solid #6f4e37;
 }
 
-/* Card Hover Animation */
+.hero-banner h1 {
+    color: #4b2e1f;
+}
+
+.hero-banner p {
+    color: #5a4033;
+}
+
+.featured-badge {
+    background-color: #6f4e37;
+    color: white;
+}
+
+
+/* =========================================
+   SECTION TITLE
+   ========================================= */
+
+.section-title {
+    color: #6f4e37;
+    border-bottom: 3px solid #ffb4a2;
+}
+
+
+/* =========================================
+   BLOG CARDS
+   ========================================= */
+
 .blog-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    border-radius: 15px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.12) !important;
 }
 
-/* ==========================================================================
-   CUSTOM MEDIA QUERIES
-   ========================================================================== */
 
-/* Mobile Screens (<= 576px) */
+/* =========================================
+   CAT IMAGES
+   ========================================= */
+
+.cat-photo {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .cat-photo {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.sidebar {
+    top: 5rem;
+}
+
+.sidebar-box {
+    background-color: white;
+    border: 1px solid #eee;
+}
+
+.sidebar-box h4 {
+    color: #6f4e37;
+}
+
+.sidebar-box a {
+    color: #5b4636;
+    text-decoration: none;
+}
+
+.sidebar-box a:hover {
+    color: #d17a22;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    background-color: #6f4e37;
+    color: white;
+}
+
+
+/* =========================================
+   CUSTOM MEDIA QUERIES
+   ========================================= */
+
+
+/* -----------------------------------------
+   MOBILE SCREENS
+   Up to 576px
+   ----------------------------------------- */
+
 @media (max-width: 576px) {
+
     .hero-banner {
         padding: 1.5rem !important;
     }
+
     .hero-banner h1 {
-        font-size: 1.75rem;
+        font-size: 1.8rem;
     }
+
+    .hero-banner p {
+        font-size: 1rem;
+    }
+
+    .cat-photo {
+        height: 200px;
+    }
+
+    .navbar-brand {
+        font-size: 1.15rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
 }
 
-/* Tablet Screens (577px - 991px) */
+
+/* -----------------------------------------
+   TABLET SCREENS
+   577px - 991px
+   ----------------------------------------- */
+
 @media (min-width: 577px) and (max-width: 991px) {
+
     aside {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
+
+    .hero-banner h1 {
+        font-size: 2.4rem;
+    }
+
+    .cat-photo {
+        height: 210px;
+    }
+
+}
+
+
+/* -----------------------------------------
+   DESKTOP SCREENS
+   992px and above
+   ----------------------------------------- */
+
+@media (min-width: 992px) {
+
+    .hero-banner {
+        padding: 4rem !important;
+    }
+
+    .cat-photo {
+        height: 220px;
+    }
+
 }

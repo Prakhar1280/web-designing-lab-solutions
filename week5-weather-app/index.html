@@ -3,20 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiment 5: Real-Time Weather App</title>
+    <title>Prakhar Weather Insights | OpenWeather Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="weather-card">
-        <h2>Live Weather Search</h2>
-        <div class="search-box">
-            <input type="text" id="city-input" placeholder="Enter city (e.g., Delhi, London)...">
-            <button id="search-btn">Search</button>
+
+    <!-- Fullscreen Dynamic Weather Background Overlay -->
+    <div class="sky-bg" id="skyBg"></div>
+    <div class="bg-overlay"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <i class="fa-solid fa-cloud-sun-rain logo-icon"></i>
+                <span>Open<strong>Weather</strong> Insights</span>
+            </div>
+            <div class="search-bar-wrap">
+                <form id="searchForm" class="search-form">
+                    <input type="text" id="cityInput" placeholder="Search city (e.g. London, Tokyo, Delhi)..." autocomplete="off" required>
+                    <button type="submit" class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
         </div>
-        <div id="weather-info" class="weather-info">
-            <p class="placeholder">Search for a city to display live weather metrics.</p>
-        </div>
-    </div>
+    </header>
+
+    <!-- Main Dashboard Container -->
+    <main class="dashboard-container">
+        
+        <!-- Hero Weather Showcase Card -->
+        <section class="weather-hero-card">
+            <div class="hero-left">
+                <div class="location-tag">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span id="cityName">London, UK</span>
+                </div>
+                <div class="temp-wrapper">
+                    <h1 id="tempDisplay">18°C</h1>
+                    <span class="feels-like" id="feelsLike">Feels like 17°C</span>
+                </div>
+                <div class="condition-badge" id="conditionText">Light Rain Shower</div>
+                <div class="high-low">
+                    <span><i class="fa-solid fa-arrow-up"></i> Max: <strong id="maxTemp">20°C</strong></span>
+                    <span><i class="fa-solid fa-arrow-down"></i> Min: <strong id="minTemp">14°C</strong></span>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="weather-image-frame">
+                    <img id="weatherImg" src="https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&w=600&q=80" alt="Weather Condition Illustration">
+                </div>
+            </div>
+        </section>
+
+        <!-- Color-Coded Detailed Analytics Breakdown Cards -->
+        <section class="analytics-grid">
+            
+            <!-- Humidity (Blue Theme) -->
+            <div class="metric-card card-blue">
+                <div class="card-header">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>HUMIDITY</span>
+                </div>
+                <div class="metric-value" id="humidityVal">78%</div>
+                <div class="progress-track"><div class="progress-fill" id="humidityBar" style="width: 78%;"></div></div>
+                <p class="metric-desc" id="humidityDesc">High moisture levels in the air.</p>
+            </div>
+
+            <!-- Wind Speed (Teal/Cyan Theme) -->
+            <div class="metric-card card-teal">
+                <div class="card-header">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>WIND SPEED</span>
+                </div>
+                <div class="metric-value" id="windVal">14 km/h</div>
+                <p class="sub-metric" id="windDir"><i class="fa-solid fa-compass"></i> Gusts up to 22 km/h (WSW)</p>
+                <p class="metric-desc">Moderate breeze suitable for outdoors.</p>
+            </div>
+
+            <!-- Atmospheric Pressure (Purple Theme) -->
+            <div class="metric-card card-purple">
+                <div class="card-header">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <span>ATMOSPHERIC PRESSURE</span>
+                </div>
+                <div class="metric-value" id="pressureVal">1013 hPa</div>
+                <p class="sub-metric"><i class="fa-solid fa-arrow-trend-up"></i> Stable Barometer</p>
+                <p class="metric-desc">Standard sea level atmospheric condition.</p>
+            </div>
+
+            <!-- Visibility & UV Index (Orange/Amber Theme) -->
+            <div class="metric-card card-amber">
+                <div class="card-header">
+                    <i class="fa-solid fa-eye"></i>
+                    <span>VISIBILITY</span>
+                </div>
+                <div class="metric-value" id="visibilityVal">10 km</div>
+                <p class="sub-metric"><i class="fa-solid fa-sun"></i> UV Index: Moderate (4/10)</p>
+                <p class="metric-desc">Clear line of sight across horizon.</p>
+            </div>
+
+        </section>
+
+        <!-- Detailed Meterological Analysis Summary Box -->
+        <section class="analysis-box">
+            <h3><i class="fa-solid fa-chart-line"></i> Comprehensive Meteorological Analysis</h3>
+            <p id="detailedAnalysis">
+                Currently in <strong>London, UK</strong>, weather conditions show a light rain pattern driven by moist maritime air masses. Temperatures remain moderate at 18°C with elevated humidity (78%). Barometric pressure is stable at 1013 hPa, indicating minimal storm escalation over the next several hours. Outdoor activities are manageable with light waterproof clothing.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Prakhar | Experiment 5 - OpenWeather API & Analytical Dashboard</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

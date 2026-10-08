@@ -1,14 +1,327 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
-.weather-card { background: #1e293b; padding: 30px; border-radius: 12px; width: 100%; max-width: 420px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); text-align: center; }
-h2 { color: #38bdf8; margin-bottom: 20px; }
-.search-box { display: flex; gap: 10px; margin-bottom: 25px; }
-input { flex: 1; padding: 12px; border: 1px solid #334155; border-radius: 6px; background: #0f172a; color: #fff; font-size: 1rem; }
-input:focus { outline: none; border-color: #38bdf8; }
-button { background: #0284c7; color: white; border: none; padding: 12px 18px; border-radius: 6px; cursor: pointer; font-weight: 600; }
-button:hover { background: #0369a1; }
-.weather-info h3 { font-size: 1.8rem; margin-bottom: 10px; color: #f8fafc; }
-.temp { font-size: 2.5rem; font-weight: bold; color: #38bdf8; margin-bottom: 10px; }
-.desc { text-transform: capitalize; font-size: 1.1rem; color: #94a3b8; }
-.placeholder { color: #64748b; font-style: italic; }
-.error { color: #ef4444; font-weight: bold; }
+/* Color Palette & CSS Variables */
+:root {
+    --text-white: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.75);
+    --glass-bg: rgba(15, 23, 42, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --card-blue: linear-gradient(135deg, rgba(14, 165, 233, 0.4), rgba(3, 105, 161, 0.6));
+    --card-teal: linear-gradient(135deg, rgba(20, 184, 166, 0.4), rgba(15, 118, 110, 0.6));
+    --card-purple: linear-gradient(135deg, rgba(168, 85, 247, 0.4), rgba(126, 34, 206, 0.6));
+    --card-amber: linear-gradient(135deg, rgba(245, 158, 11, 0.4), rgba(180, 83, 9, 0.6));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--text-white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Fullscreen Dynamic Background Image */
+.sky-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    transition: background-image 0.8s ease-in-out;
+}
+
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(11, 15, 25, 0.5) 0%, rgba(11, 15, 25, 0.85) 100%);
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.logo-icon {
+    color: #38bdf8;
+    font-size: 1.5rem;
+}
+
+.search-form {
+    display: flex;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--glass-border);
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 2px 6px;
+    transition: border-color 0.2s;
+}
+
+.search-form:focus-within {
+    border-color: #38bdf8;
+}
+
+.search-form input {
+    background: transparent;
+    border: none;
+    padding: 10px 16px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    width: 260px;
+}
+
+.search-form input::placeholder {
+    color: var(--text-muted);
+}
+
+.btn-search {
+    background: #0284c7;
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    transition: background 0.2s;
+}
+
+.btn-search:hover {
+    background: #0369a1;
+}
+
+/* Main Dashboard Layout */
+.dashboard-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Hero Showcase Card */
+.weather-hero-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.location-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.temp-wrapper h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.feels-like {
+    color: var(--text-muted);
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.condition-badge {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #f1f5f9;
+}
+
+.high-low {
+    display: flex;
+    gap: 20px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.high-low strong {
+    color: #ffffff;
+}
+
+.weather-image-frame {
+    width: 220px;
+    height: 180px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.weather-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Analytics Grid & Color Boxes */
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.metric-card {
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-blue { background: var(--card-blue); }
+.card-teal { background: var(--card-teal); }
+.card-purple { background: var(--card-purple); }
+.card-amber { background: var(--card-amber); }
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 12px;
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #ffffff;
+    border-radius: 3px;
+}
+
+.sub-metric {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+}
+
+.metric-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* Detailed Analysis Box */
+.analysis-box {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.analysis-box h3 {
+    color: #38bdf8;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.analysis-box p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #f1f5f9;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px 20px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    background: rgba(11, 15, 25, 0.8);
+    border-top: 1px solid var(--glass-border);
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .weather-hero-card {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+    .search-form input {
+        width: 160px;
+    }
+}

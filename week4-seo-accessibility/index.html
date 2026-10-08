@@ -3,67 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="An SEO-optimized and accessible personal portfolio demonstrating semantic HTML5 tags, ARIA roles, high-contrast UI, and structured metadata.">
-    <meta name="keywords" content="Web Design, SEO, Accessibility, ARIA, Semantic HTML, Portfolio, Data Science">
-    <meta name="author" content="Prakhar">
-
-    <!-- Open Graph (OG) Metadata for Social Media & SEO -->
-    <meta property="og:title" content="Prakhar - Accessible & SEO Optimized Portfolio">
-    <meta property="og:description" content="Explore semantic HTML structure, accessibility standards, and SEO best practices.">
-    <meta property="og:type" content="website">
-
-    <title>Experiment 4: SEO & Accessibility Optimization</title>
+    <title>SEO Master | High Grade Web Analyzer</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <header role="banner">
-        <h1>Prakhar | CS-DS Portfolio</h1>
-        <nav role="navigation" aria-label="Main Navigation">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <i class="fa-solid fa-broom-ball logo-icon"></i>
+                <span>SEO <strong>MASTER</strong></span>
+            </div>
+            <div class="status-badge">
+                <span class="pulse-dot"></span> SEO Status: Excellent
+            </div>
+        </div>
     </header>
 
-    <main id="main-content" role="main">
-        <section id="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">About This Accessible Site</h2>
-            <p>This webpage is explicitly optimized for search engines (SEO) and screen readers (Accessibility / WCAG compliance). It includes semantic landmarks, ARIA labels, descriptive alt text, skip links, and high color contrast ratio.</p>
-        </section>
-
-        <section id="skills" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Core Competencies</h2>
-            <ul>
-                <li>Semantic Markup (HTML5)</li>
-                <li>Accessibility (WCAG 2.1 & ARIA)</li>
-                <li>Search Engine Optimization (Meta & OG tags)</li>
-            </ul>
-        </section>
-
-        <section id="contact" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Contact Form</h2>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
-                    <input type="text" id="full-name" name="name" required aria-required="true">
+    <!-- Clean Master Styled Hero Speedometer Dashboard -->
+    <section class="master-dashboard">
+        <div class="dashboard-container">
+            
+            <!-- Circular Dial / Meter -->
+            <div class="gauge-wrapper">
+                <div class="outer-ring">
+                    <div class="scanner-sweep" id="scannerSweep"></div>
+                    <div class="inner-circle">
+                        <span class="grade-label">EXCELLENT</span>
+                        <div class="score-display">
+                            <span id="scoreNumber">98</span>
+                            <span class="percent">%</span>
+                        </div>
+                        <span class="seo-title"><i class="fa-solid fa-chart-line"></i> SEO GRADE</span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email-address">Email Address <span aria-hidden="true">*</span></label>
-                    <input type="email" id="email-address" name="email" required aria-required="true">
-                </div>
-                <button type="submit" aria-label="Submit Contact Form">Submit</button>
-            </form>
-        </section>
-    </main>
+            </div>
 
-    <footer role="contentinfo">
-        <p>&copy; 2026 Prakhar. Built adhering to WCAG 2.1 AA accessibility guidelines.</p>
+            <!-- Main Status Headline -->
+            <div class="headline-box">
+                <h2>Your Website Has a Top-Tier SEO Grade!</h2>
+                <p>All core search engine optimization metrics are running at peak efficiency.</p>
+            </div>
+
+            <!-- Clean Master Action Buttons -->
+            <div class="action-bar">
+                <button class="btn-clean" id="scanBtn">
+                    <i class="fa-solid fa-rocket"></i> BOOST SEO GRADE
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEO Metric Cards (Clean Master Storage Breakdown Style) -->
+    <section class="metrics-section">
+        <div class="section-container">
+            <h3><i class="fa-solid fa-microchip"></i> Live Optimization Breakdown</h3>
+            
+            <div class="metrics-grid">
+                
+                <!-- Metric 1 -->
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <div class="icon-box green"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div>
+                            <h4>Meta Data & Indexing</h4>
+                            <span class="subtext">Search Engine Readiness</span>
+                        </div>
+                        <span class="badge-good">100%</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill fill-100"></div></div>
+                    <p class="status-text"><i class="fa-solid fa-circle-check"></i> Title, Meta Description, & OpenGraph validated</p>
+                </div>
+
+                <!-- Metric 2 -->
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <div class="icon-box blue"><i class="fa-solid fa-bolt"></i></div>
+                        <div>
+                            <h4>Page Load Speed</h4>
+                            <span class="subtext">Core Web Vitals</span>
+                        </div>
+                        <span class="badge-good">96%</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill fill-96"></div></div>
+                    <p class="status-text"><i class="fa-solid fa-circle-check"></i> LCP & FID optimized for desktop and mobile</p>
+                </div>
+
+                <!-- Metric 3 -->
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <div class="icon-box purple"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <div>
+                            <h4>Mobile Responsiveness</h4>
+                            <span class="subtext">Cross-Device Layout</span>
+                        </div>
+                        <span class="badge-good">98%</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill fill-98"></div></div>
+                    <p class="status-text"><i class="fa-solid fa-circle-check"></i> Touch targets and fluid grids calibrated</p>
+                </div>
+
+                <!-- Metric 4 -->
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <div class="icon-box orange"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div>
+                            <h4>Security & SSL</h4>
+                            <span class="subtext">HTTPS & Security Headers</span>
+                        </div>
+                        <span class="badge-good">100%</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill fill-100"></div></div>
+                    <p class="status-text"><i class="fa-solid fa-circle-check"></i> Valid SSL Certificate and clean header protocol</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Prakhar | Experiment 4 - SEO Master Dashboard</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

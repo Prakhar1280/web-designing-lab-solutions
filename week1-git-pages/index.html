@@ -1,76 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Design Experiment 1</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f4f4f4;
-  color: #333;
-}
-header {
-  background-color: #222;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-nav {
-  background-color: #444;
-  padding: 10px;
-  text-align: center;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-}
-.hero {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: white;
-}
-.hero h1 {
-  color: #222;
-}
-section {
-  padding: 30px;
-  text-align: center;
-}
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakhar's Gaming Vault | Online Games & Hardware</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <h1>Web Design Experiment 1</h1>
-  <p>GitHub Repository and GitHub Pages</p>
-</header>
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
-<section class="hero" id="home">
-  <h1>Welcome to My Webpage</h1>
-  <p>This webpage demonstrates the use of GitHub repository, branches, merging and GitHub Pages.</p>
-</section>
-<section id="about">
-  <h2>About</h2>
-  <p>GitHub is used to store and manage the project. Branches are used to make changes and GitHub Pages is used to publish the website online.</p>
-</section>
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: student@example.com</p>
-</section>
-<footer>
-  <p>Web Design Experiment 1</p>
-</footer>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Prakhar's Gaming Vault</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#fav-games">Favorite Games</a></li>
+                    <li><a href="#pc-setups">PC Setups</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero / Intro Section -->
+        <section id="about" class="hero-card">
+            <h2>Welcome to My Gaming Hub</h2>
+            <p>Hey! I'm Prakhar. Welcome to my personal gaming portal built for Experiment 1. Here, I showcase my top PC and Mobile games alongside high-performance PC setup aesthetics that inspire my gaming & programming workstation.</p>
+        </section>
+
+        <!-- Favorite Games Section -->
+        <section id="fav-games" class="section-card">
+            <h2>Prakhar's Top Games</h2>
+            
+            <h3 class="category-title">🎮 PC Favorites</h3>
+            <div class="games-grid">
+                
+                <!-- CS 2.0 -->
+                <article class="game-card">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Counter-Strike 2 Gameplay Art">
+                    <div class="game-info">
+                        <span class="platform-badge pc">PC</span>
+                        <h4>CS 2.0 (Counter-Strike 2)</h4>
+                        <p>The ultimate tactical sub-tick FPS shooter. Perfect for high-stakes competitive matchmaking and precise aim control.</p>
+                    </div>
+                </article>
+
+                <!-- Metro Series -->
+                <article class="game-card">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Metro Series Atmospheric Post-Apocalyptic Environment">
+                    <div class="game-info">
+                        <span class="platform-badge pc">PC</span>
+                        <h4>Metro Series</h4>
+                        <p>Immersive, atmospheric post-apocalyptic story shooter. Features incredible ray-traced visuals and survival mechanics in underground Moscow.</p>
+                    </div>
+                </article>
+
+                <!-- Valorant -->
+                <article class="game-card">
+                    <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80" alt="Valorant Tactical Shooter Aesthetic">
+                    <div class="game-info">
+                        <span class="platform-badge pc">PC</span>
+                        <h4>Valorant</h4>
+                        <p>Character-based 5v5 tactical shooter combining crisp gunplay with agent abilities for strategic team combat.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <h3 class="category-title mt-4">📱 Mobile Favorite</h3>
+            <div class="games-grid mobile-grid">
+                
+                <!-- Clash Royale -->
+                <article class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Clash Royale Mobile Gaming Card Strategy">
+                    <div class="game-info">
+                        <span class="platform-badge mobile">Mobile</span>
+                        <h4>Clash Royale</h4>
+                        <p>Real-time head-to-head multiplayer strategy game combining collectible cards, tower defense, and fast-paced arena duels.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PC Setups Showcase -->
+        <section id="pc-setups" class="section-card">
+            <h2>PC Hardware & Battlestations</h2>
+            <p class="subtitle">Clean ambient lighting, ultra-wide monitors, and high-tier hardware configurations inspiring my setup.</p>
+            
+            <div class="setup-grid">
+                <figure class="setup-card">
+                    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80" alt="RGB Gaming Setup with Curved Monitor">
+                    <figcaption>
+                        <h4>Minimalist RGB Battlestation</h4>
+                        <p>Dual-monitor curved desk setup with addressable ambient RGB backlighting and mechanical keyboard.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="setup-card">
+                    <img src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=800&q=80" alt="Custom Water-cooled PC Rig">
+                    <figcaption>
+                        <h4>Custom Liquid-Cooled Rig</h4>
+                        <p>High-airflow glass case enclosure featuring custom hard-tubing liquid cooling loops for GPU and CPU temperatures.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Prakhar. All Rights Reserved. | Web Designing Lab (JCS 308/408) - Experiment 1</p>
+    </footer>
+
 </body>
 </html>
