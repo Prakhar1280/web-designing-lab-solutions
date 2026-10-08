@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An SEO-optimized and accessible personal portfolio demonstrating semantic HTML5 tags, ARIA roles, high-contrast UI, and structured metadata.">
+    <meta name="keywords" content="Web Design, SEO, Accessibility, ARIA, Semantic HTML, Portfolio, Data Science">
+    <meta name="author" content="Prakhar">
+
+    <!-- Open Graph (OG) Metadata for Social Media & SEO -->
+    <meta property="og:title" content="Prakhar - Accessible & SEO Optimized Portfolio">
+    <meta property="og:description" content="Explore semantic HTML structure, accessibility standards, and SEO best practices.">
+    <meta property="og:type" content="website">
+
+    <title>Experiment 4: SEO & Accessibility Optimization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <h1>Prakhar | CS-DS Portfolio</h1>
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About This Accessible Site</h2>
+            <p>This webpage is explicitly optimized for search engines (SEO) and screen readers (Accessibility / WCAG compliance). It includes semantic landmarks, ARIA labels, descriptive alt text, skip links, and high color contrast ratio.</p>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Core Competencies</h2>
+            <ul>
+                <li>Semantic Markup (HTML5)</li>
+                <li>Accessibility (WCAG 2.1 & ARIA)</li>
+                <li>Search Engine Optimization (Meta & OG tags)</li>
+            </ul>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Form</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="full-name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email-address">Email Address <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email-address" name="email" required aria-required="true">
+                </div>
+                <button type="submit" aria-label="Submit Contact Form">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Prakhar. Built adhering to WCAG 2.1 AA accessibility guidelines.</p>
+    </footer>
+
+</body>
+</html>

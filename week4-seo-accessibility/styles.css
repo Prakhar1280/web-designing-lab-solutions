@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background-color: #ffffff; color: #111111; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
+.skip-link { position: absolute; top: -40px; left: 0; background: #000; color: #fff; padding: 8px; z-index: 100; text-decoration: none; }
+.skip-link:focus { top: 0; }
+header { border-bottom: 3px solid #005a9c; padding-bottom: 15px; margin-bottom: 20px; }
+nav ul { list-style: none; display: flex; gap: 15px; margin-top: 10px; }
+nav a { color: #005a9c; font-weight: bold; text-decoration: underline; font-size: 1.1rem; }
+nav a:focus, nav a:hover { background-color: #005a9c; color: #ffffff; outline: 3px solid #000; }
+main { display: flex; flex-direction: column; gap: 30px; }
+h1, h2 { color: #005a9c; }
+.form-group { margin-bottom: 15px; display: flex; flex-direction: column; gap: 5px; }
+input { padding: 10px; border: 2px solid #333; border-radius: 4px; font-size: 1rem; }
+input:focus { outline: 3px solid #005a9c; }
+button { background-color: #005a9c; color: #ffffff; padding: 12px; border: none; font-size: 1rem; font-weight: bold; cursor: pointer; border-radius: 4px; }
+button:focus, button:hover { background-color: #003366; outline: 3px solid #000; }
+footer { margin-top: 40px; border-top: 1px solid #ccc; padding-top: 15px; text-align: center; }
