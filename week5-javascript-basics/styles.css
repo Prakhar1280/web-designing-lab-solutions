@@ -1,0 +1,228 @@
+/* Base Styles & Light Theme */
+:root {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #334155;
+    --heading-color: #0f172a;
+    --nav-bg: #0f172a;
+    --nav-text: #e2e8f0;
+    --primary: #0284c7;
+    --border-color: #e2e8f0;
+    --card-shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Theme Variables */
+body.dark-mode {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #cbd5e1;
+    --heading-color: #f8fafc;
+    --nav-bg: #0284c7;
+    --nav-text: #ffffff;
+    --primary: #38bdf8;
+    --border-color: #334155;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Header & Nav */
+header {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.4rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+    background: transparent;
+    border: 2px solid var(--nav-text);
+    color: var(--nav-text);
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+.card h2 {
+    color: var(--heading-color);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* Tables */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Badges & Projects */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge {
+    background-color: var(--border-color);
+    color: var(--heading-color);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--bg-color);
+    border-left: 4px solid var(--primary);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.tech-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    background-color: var(--border-color);
+    color: var(--heading-color);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+/* Form & Validation Messages */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.error-msg {
+    color: #ef4444;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    min-height: 18px;
+}
+
+.status-box {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    display: none;
+    font-weight: 600;
+}
+
+.status-box.success {
+    display: block;
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 600px) {
+    .nav-container { flex-direction: column; gap: 10px; }
+    .project-grid { grid-template-columns: 1fr; }
+}

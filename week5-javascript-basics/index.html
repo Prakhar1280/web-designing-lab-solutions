@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript & DOM Manipulation - Web Design Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <h1 class="logo">Prakhar | CS-DS</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section with Dynamic Greeting -->
+        <section id="about" class="card hero">
+            <h2 id="greeting">Welcome to My Portfolio</h2>
+            <p>I am a Computer Science & Data Science undergraduate. This webpage demonstrates DOM manipulation, event listeners, real-time input validation, and interactive theme switching using JavaScript.</p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="card">
+            <h2>Education</h2>
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Degree / Course</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                            <th>Specialization</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>B.Tech</td>
+                            <td>AKTU University</td>
+                            <td>2022 - 2026</td>
+                            <td>Computer Science & Data Science</td>
+                        </tr>
+                        <tr>
+                            <td>Class XII</td>
+                            <td>CBSE Board</td>
+                            <td>2022</td>
+                            <td>Science (PCM)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="card">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="badge">C++</span>
+                <span class="badge">Python</span>
+                <span class="badge">HTML5 & CSS3</span>
+                <span class="badge">JavaScript (ES6+)</span>
+                <span class="badge">Git & GitHub</span>
+                <span class="badge">DOM Manipulation</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="card">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Web Designing Lab Portal</h3>
+                    <p>Central repository and multi-page deployment site for 12 structured web design lab experiments.</p>
+                    <span class="tech-tag">HTML5</span> <span class="tech-tag">CSS3</span> <span class="tech-tag">JavaScript</span>
+                </article>
+                <article class="project-card">
+                    <h3>Interactive DOM Portfolio</h3>
+                    <p>Dynamic web page with real-time DOM updates, automated time-based greetings, and theme persistence.</p>
+                    <span class="tech-tag">JavaScript</span> <span class="tech-tag">Event Listeners</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Form with JS Validation -->
+        <section id="contact" class="card">
+            <h2>Contact Me</h2>
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                    <small class="error-msg" id="name-error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address">
+                    <small class="error-msg" id="email-error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Type your message..."></textarea>
+                    <small class="error-msg" id="message-error"></small>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div id="form-status" class="status-box"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Prakhar. All Rights Reserved. | Web Designing Lab (JCS 308/408)</p>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
