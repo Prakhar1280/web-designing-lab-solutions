@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio with CSS - Web Design Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <!-- Header & Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <h1 class="logo">Prakhar | CS-DS</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero / About Section -->
+        <section id="about" class="card hero">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I am an undergraduate student in Computer Science & Data Science, passionate about modern web engineering, clean layout design, and data analytics.</p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="card">
+            <h2>Education</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Degree / Course</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                        <th>Specialization</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.Tech</td>
+                        <td>AKTU University</td>
+                        <td>2022 - 2026</td>
+                        <td>Computer Science & Data Science</td>
+                    </tr>
+                    <tr>
+                        <td>Class XII</td>
+                        <td>CBSE Board</td>
+                        <td>2022</td>
+                        <td>Science (PCM)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="card">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="badge">C++</span>
+                <span class="badge">Python</span>
+                <span class="badge">HTML5 & CSS3</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Git & GitHub</span>
+                <span class="badge">SQL</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="card">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <article class="project-card">
+                    <h3>Web Designing Lab Portal</h3>
+                    <p>Central repository and multi-page deployment site for 12 structured web design lab experiments.</p>
+                    <span class="tech-tag">HTML5</span> <span class="tech-tag">CSS3</span> <span class="tech-tag">GitHub Pages</span>
+                </article>
+                <article class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive, modern portfolio demonstrating semantic markup, modern CSS styling, and custom UI components.</p>
+                    <span class="tech-tag">CSS Grid/Flexbox</span> <span class="tech-tag">Semantic HTML</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="card">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Type your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Prakhar. All Rights Reserved. | Web Designing Lab (JCS 308/408)</p>
+    </footer>
+
+</body>
+</html>
