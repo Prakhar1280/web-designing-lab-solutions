@@ -1,0 +1,42 @@
+/* Custom Global Adjustments */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+}
+
+/* Hero Featured Banner Styling */
+.hero-banner {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-left: 5px solid #0dcaf0;
+}
+
+/* Card Hover Animation */
+.blog-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ==========================================================================
+   CUSTOM MEDIA QUERIES
+   ========================================================================== */
+
+/* Mobile Screens (<= 576px) */
+@media (max-width: 576px) {
+    .hero-banner {
+        padding: 1.5rem !important;
+    }
+    .hero-banner h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Tablet Screens (577px - 991px) */
+@media (min-width: 577px) and (max-width: 991px) {
+    aside {
+        margin-top: 2rem;
+    }
+}
