@@ -1,135 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEO Master | High Grade Web Analyzer</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO and Accessibility Optimization: Before and After | Week 4</title>
+  <meta name="description" content="Week 4 web design practical: a webpage rebuilt with semantic HTML, a clean heading structure, meta tags and accessibility features, with a live audit that checks the page itself.">
+  <meta name="author" content="Prakhar">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#14213d">
+  <link rel="canonical" href="https://example.com/week4-seo-accessibility/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="SEO and Accessibility Optimization: Before and After">
+  <meta property="og:description" content="A page rebuilt with semantic HTML, proper headings and meta tags, plus a live self-audit.">
+  <meta property="og:url" content="https://example.com/week4-seo-accessibility/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"TechArticle","headline":"SEO and Accessibility Optimization: Before and After","author":{"@type":"Person","name":"Prakhar"},"inLanguage":"en","about":"Semantic HTML, heading structure, meta tags, accessibility"}
+  </script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to main content</a>
 
-    <!-- Header Navigation -->
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="brand">
-                <i class="fa-solid fa-broom-ball logo-icon"></i>
-                <span>SEO <strong>MASTER</strong></span>
-            </div>
-            <div class="status-badge">
-                <span class="pulse-dot"></span> SEO Status: Excellent
-            </div>
-        </div>
-    </header>
+  <header class="site-header">
+    <p class="brand">Web Design Practical <span>Week 4</span></p>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#aim">Aim</a></li>
+        <li><a href="#compare">Before and after</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#audit">Live audit</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Clean Master Styled Hero Speedometer Dashboard -->
-    <section class="master-dashboard">
-        <div class="dashboard-container">
-            
-            <!-- Circular Dial / Meter -->
-            <div class="gauge-wrapper">
-                <div class="outer-ring">
-                    <div class="scanner-sweep" id="scannerSweep"></div>
-                    <div class="inner-circle">
-                        <span class="grade-label">EXCELLENT</span>
-                        <div class="score-display">
-                            <span id="scoreNumber">98</span>
-                            <span class="percent">%</span>
-                        </div>
-                        <span class="seo-title"><i class="fa-solid fa-chart-line"></i> SEO GRADE</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Main Status Headline -->
-            <div class="headline-box">
-                <h2>Your Website Has a Top-Tier SEO Grade!</h2>
-                <p>All core search engine optimization metrics are running at peak efficiency.</p>
-            </div>
-
-            <!-- Clean Master Action Buttons -->
-            <div class="action-bar">
-                <button class="btn-clean" id="scanBtn">
-                    <i class="fa-solid fa-rocket"></i> BOOST SEO GRADE
-                </button>
-            </div>
-
-        </div>
+  <main id="main">
+    <section class="hero" aria-labelledby="title">
+      <h1 id="title">Optimizing a webpage for SEO and accessibility</h1>
+      <p class="lead">A plain page rebuilt with semantic HTML, a proper heading structure and complete meta tags. This page is the result, and it can audit itself.</p>
+      <p><a class="btn" href="#audit">Run the live audit</a></p>
     </section>
 
-    <!-- SEO Metric Cards (Clean Master Storage Breakdown Style) -->
-    <section class="metrics-section">
-        <div class="section-container">
-            <h3><i class="fa-solid fa-microchip"></i> Live Optimization Breakdown</h3>
-            
-            <div class="metrics-grid">
-                
-                <!-- Metric 1 -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <div class="icon-box green"><i class="fa-solid fa-magnifying-glass"></i></div>
-                        <div>
-                            <h4>Meta Data & Indexing</h4>
-                            <span class="subtext">Search Engine Readiness</span>
-                        </div>
-                        <span class="badge-good">100%</span>
-                    </div>
-                    <div class="progress-bar"><div class="fill fill-100"></div></div>
-                    <p class="status-text"><i class="fa-solid fa-circle-check"></i> Title, Meta Description, & OpenGraph validated</p>
-                </div>
-
-                <!-- Metric 2 -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <div class="icon-box blue"><i class="fa-solid fa-bolt"></i></div>
-                        <div>
-                            <h4>Page Load Speed</h4>
-                            <span class="subtext">Core Web Vitals</span>
-                        </div>
-                        <span class="badge-good">96%</span>
-                    </div>
-                    <div class="progress-bar"><div class="fill fill-96"></div></div>
-                    <p class="status-text"><i class="fa-solid fa-circle-check"></i> LCP & FID optimized for desktop and mobile</p>
-                </div>
-
-                <!-- Metric 3 -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <div class="icon-box purple"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                        <div>
-                            <h4>Mobile Responsiveness</h4>
-                            <span class="subtext">Cross-Device Layout</span>
-                        </div>
-                        <span class="badge-good">98%</span>
-                    </div>
-                    <div class="progress-bar"><div class="fill fill-98"></div></div>
-                    <p class="status-text"><i class="fa-solid fa-circle-check"></i> Touch targets and fluid grids calibrated</p>
-                </div>
-
-                <!-- Metric 4 -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <div class="icon-box orange"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div>
-                            <h4>Security & SSL</h4>
-                            <span class="subtext">HTTPS & Security Headers</span>
-                        </div>
-                        <span class="badge-good">100%</span>
-                    </div>
-                    <div class="progress-bar"><div class="fill fill-100"></div></div>
-                    <p class="status-text"><i class="fa-solid fa-circle-check"></i> Valid SSL Certificate and clean header protocol</p>
-                </div>
-
-            </div>
-        </div>
+    <section id="aim" aria-labelledby="aim-h">
+      <h2 id="aim-h">Aim</h2>
+      <p>To optimize a given webpage for search engines and assistive technology by using semantic elements, one logical heading outline, and descriptive meta tags.</p>
+      <h3>Why it matters</h3>
+      <p>Search engines and screen readers both read structure, not appearance. A page built from generic <code>&lt;div&gt;</code> elements looks fine but tells them nothing about what is a heading, a menu or the main content.</p>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Prakhar | Experiment 4 - SEO Master Dashboard</p>
-    </footer>
+    <section id="compare" aria-labelledby="cmp-h">
+      <h2 id="cmp-h">Before and after</h2>
+      <div class="cols">
+        <figure class="bad">
+          <figcaption>Before: no meaning for crawlers or screen readers</figcaption>
+<pre><code>&lt;div class="top"&gt;
+  &lt;div class="logo"&gt;SEO Master&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="big"&gt;Top Grade!&lt;/div&gt;
+&lt;img src="chart.png"&gt;
+&lt;div onclick="scan()"&gt;Scan&lt;/div&gt;
+&lt;div class="foot"&gt;&amp;copy; 2026&lt;/div&gt;</code></pre>
+        </figure>
+        <figure class="good">
+          <figcaption>After: every part has a role</figcaption>
+<pre><code>&lt;header&gt;
+  &lt;nav aria-label="Primary"&gt;…&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main id="main"&gt;
+  &lt;h1&gt;Page topic&lt;/h1&gt;
+  &lt;img src="chart.png" alt="Score by category"&gt;
+  &lt;button type="button"&gt;Scan&lt;/button&gt;
+&lt;/main&gt;
+&lt;footer&gt;&amp;copy; 2026&lt;/footer&gt;</code></pre>
+        </figure>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="changes" aria-labelledby="chg-h">
+      <h2 id="chg-h">What was changed</h2>
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="chg-h">
+        <table>
+          <caption>Optimizations grouped by area</caption>
+          <thead><tr><th scope="col">Area</th><th scope="col">Change</th><th scope="col">Benefit</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Semantics</th><td><code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>footer</code></td><td>Landmarks for screen readers and crawlers</td></tr>
+            <tr><th scope="row">Headings</th><td>One <code>h1</code>, then <code>h2</code> and <code>h3</code> without skipping levels</td><td>Clear outline and topic signal</td></tr>
+            <tr><th scope="row">Meta tags</th><td>Title, description, canonical, robots, Open Graph, JSON-LD</td><td>Better snippets and link previews</td></tr>
+            <tr><th scope="row">Keyboard</th><td>Skip link, visible focus, real <code>button</code> elements</td><td>Usable without a mouse</td></tr>
+            <tr><th scope="row">Visuals</th><td>High contrast, relative units, reduced-motion support</td><td>Readable and comfortable for more people</td></tr>
+            <tr><th scope="row">Performance</th><td>No external fonts or icon libraries</td><td>Faster load, fewer requests</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="audit" aria-labelledby="aud-h">
+      <h2 id="aud-h">Live audit</h2>
+      <p>This runs real checks against the page you are reading, not fixed numbers.</p>
+      <button class="btn" id="runAudit" type="button">Run audit</button>
+      <div id="result" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Prakhar. Web Design Practical, Week 4.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

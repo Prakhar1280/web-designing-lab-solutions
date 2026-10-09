@@ -1,116 +1,315 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prakhar's Gaming Vault | Online Games & Hardware</title>
+    <meta name="theme-color" content="#080b14">
+
+    <title>Prakhar's Gaming Vault | Gaming & PC Setups</title>
+    <meta name="description"
+          content="Explore Prakhar's favorite PC games, mobile games, and gaming setups.">
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <!-- Header & Navigation -->
-    <header>
+    <!-- Navigation -->
+    <header class="site-header">
         <div class="header-container">
-            <h1 class="logo">Prakhar's Gaming Vault</h1>
-            <nav>
+            <a href="#home" class="logo">
+                <span class="logo-icon">PV</span>
+                <span>Prakhar's <span class="accent">Gaming Vault</span></span>
+            </a>
+
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#fav-games">Favorite Games</a></li>
+                    <li><a href="#fav-games">Games</a></li>
                     <li><a href="#pc-setups">PC Setups</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <!-- Hero / Intro Section -->
-        <section id="about" class="hero-card">
-            <h2>Welcome to My Gaming Hub</h2>
-            <p>Hey! I'm Prakhar. Welcome to my personal gaming portal built for Experiment 1. Here, I showcase my top PC and Mobile games alongside high-performance PC setup aesthetics that inspire my gaming & programming workstation.</p>
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">
+                    <span class="status-dot"></span>
+                    WELCOME TO MY WORLD
+                </span>
+
+                <h1>
+                    PLAY HARD.<br>
+                    <span class="gradient-text">STAY LEGENDARY.</span>
+                </h1>
+
+                <p>
+                    Welcome to my gaming universe — a place for competitive
+                    battles, unforgettable stories, mobile strategy, and
+                    dream PC setups.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#fav-games" class="btn btn-primary">
+                        Explore My Games <span>↗</span>
+                    </a>
+                    <a href="#pc-setups" class="btn btn-secondary">
+                        View Setups
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>04</strong>
+                        <span>Favorite Games</span>
+                    </div>
+                    <div>
+                        <strong>02</strong>
+                        <span>Gaming Platforms</span>
+                    </div>
+                    <div>
+                        <strong>∞</strong>
+                        <span>Gaming Passion</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Gaming themed illustration">
+                <div class="visual-glow"></div>
+                <div class="visual-ring ring-one"></div>
+                <div class="visual-ring ring-two"></div>
+                <div class="visual-card">
+                    <span class="visual-symbol">⌘</span>
+                    <span class="visual-label">GAME MODE</span>
+                    <strong>ON</strong>
+                    <span class="visual-caption">READY PLAYER ONE</span>
+                </div>
+                <span class="floating-tag tag-top">FPS / TACTICAL</span>
+                <span class="floating-tag tag-bottom">PC + MOBILE</span>
+            </div>
         </section>
 
-        <!-- Favorite Games Section -->
-        <section id="fav-games" class="section-card">
-            <h2>Prakhar's Top Games</h2>
-            
-            <h3 class="category-title">🎮 PC Favorites</h3>
+        <!-- About Section -->
+        <section id="about" class="about-section section-wrap">
+            <div class="section-heading">
+                <span class="eyebrow">THE PLAYER BEHIND THE SCREEN</span>
+                <h2>Welcome to My <span class="accent">Gaming Hub</span></h2>
+            </div>
+
+            <p class="about-text">
+                Hey, I'm Prakhar! This is my personal gaming portal,
+                where I showcase my favorite PC and mobile games,
+                competitive experiences, and the gaming setups that
+                inspire my passion for technology and programming.
+            </p>
+        </section>
+
+        <!-- Favorite Games -->
+        <section id="fav-games" class="games-section section-wrap">
+            <div class="section-heading">
+                <span class="eyebrow">MY CURRENT FAVORITES</span>
+                <h2>Choose Your <span class="accent">Arena</span></h2>
+                <p>From precision-based FPS battles to strategic mobile duels.</p>
+            </div>
+
+            <h3 class="category-title">
+                <span class="category-icon">⌨</span>
+                PC GAMES
+            </h3>
+
             <div class="games-grid">
-                
-                <!-- CS 2.0 -->
+
+                <!-- Counter-Strike 2 -->
                 <article class="game-card">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Counter-Strike 2 Gameplay Art">
+                    <div class="game-image">
+                        <img
+                            src="images/cs.jpeg"
+                            alt="Counter-Strike 2 game artwork"
+                            loading="lazy"
+                        >
+                        <span class="platform-badge">PC · FPS</span>
+                    </div>
+
                     <div class="game-info">
-                        <span class="platform-badge pc">PC</span>
-                        <h4>CS 2.0 (Counter-Strike 2)</h4>
-                        <p>The ultimate tactical sub-tick FPS shooter. Perfect for high-stakes competitive matchmaking and precise aim control.</p>
+                        <span class="game-number">01 / TACTICAL SHOOTER</span>
+                        <h4>Counter-Strike 2</h4>
+                        <p>
+                            Precision aim, tactical teamwork, and intense
+                            competitive matches. Every round is a test of skill.
+                        </p>
+                        <a href="https://store.steampowered.com/app/730/CounterStrike_2/"
+                           target="_blank" rel="noopener noreferrer"
+                           class="game-link">
+                            Explore Game <span>↗</span>
+                        </a>
                     </div>
                 </article>
 
                 <!-- Metro Series -->
                 <article class="game-card">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Metro Series Atmospheric Post-Apocalyptic Environment">
+                    <div class="game-image">
+                        <img
+                            src="images/metro.jpg"
+                            alt="Metro Series game artwork"
+                            loading="lazy"
+                        >
+                        <span class="platform-badge">PC · STORY</span>
+                    </div>
+
                     <div class="game-info">
-                        <span class="platform-badge pc">PC</span>
+                        <span class="game-number">02 / SURVIVAL ADVENTURE</span>
                         <h4>Metro Series</h4>
-                        <p>Immersive, atmospheric post-apocalyptic story shooter. Features incredible ray-traced visuals and survival mechanics in underground Moscow.</p>
+                        <p>
+                            Atmospheric post-apocalyptic adventures,
+                            immersive storytelling, and survival in a
+                            dangerous world.
+                        </p>
+                        <a href="https://store.steampowered.com/app/412020/Metro_Exodus/"
+                           target="_blank" rel="noopener noreferrer"
+                           class="game-link">
+                            Explore Metro Exodus <span>↗</span>
+                        </a>
                     </div>
                 </article>
 
-                <!-- Valorant -->
+                <!-- VALORANT -->
                 <article class="game-card">
-                    <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80" alt="Valorant Tactical Shooter Aesthetic">
+                    <div class="game-image valorant-image">
+                        <img
+                            src="images/val.jpeg"
+                            alt="VALORANT game artwork"
+                            loading="lazy"
+                        >
+                        <span class="platform-badge">PC · 5V5 FPS</span>
+                    </div>
+
                     <div class="game-info">
-                        <span class="platform-badge pc">PC</span>
-                        <h4>Valorant</h4>
-                        <p>Character-based 5v5 tactical shooter combining crisp gunplay with agent abilities for strategic team combat.</p>
+                        <span class="game-number">03 / TACTICAL COMPETITION</span>
+                        <h4>VALORANT</h4>
+                        <p>
+                            Agent abilities, sharp aim, smart strategies,
+                            and coordinated 5v5 tactical combat.
+                        </p>
+                        <a href="https://playvalorant.com/en-us/"
+                           target="_blank" rel="noopener noreferrer"
+                           class="game-link">
+                            Explore VALORANT <span>↗</span>
+                        </a>
                     </div>
                 </article>
 
             </div>
 
-            <h3 class="category-title mt-4">📱 Mobile Favorite</h3>
+            <h3 class="category-title mobile-category">
+                <span class="category-icon">▣</span>
+                MOBILE GAMES
+            </h3>
+
             <div class="games-grid mobile-grid">
-                
+
                 <!-- Clash Royale -->
                 <article class="game-card">
-                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Clash Royale Mobile Gaming Card Strategy">
+                    <div class="game-image clash-image">
+                        <img
+                            src="images/cr.jpeg"
+                            alt="Clash Royale game artwork"
+                            loading="lazy"
+                        >
+                        <span class="platform-badge">MOBILE · STRATEGY</span>
+                    </div>
+
                     <div class="game-info">
-                        <span class="platform-badge mobile">Mobile</span>
+                        <span class="game-number">04 / ARENA STRATEGY</span>
                         <h4>Clash Royale</h4>
-                        <p>Real-time head-to-head multiplayer strategy game combining collectible cards, tower defense, and fast-paced arena duels.</p>
+                        <p>
+                            Build your deck, deploy troops, defend your
+                            towers, and outsmart opponents in real-time battles.
+                        </p>
+                        <a href="https://supercell.com/en/games/clashroyale/"
+                           target="_blank" rel="noopener noreferrer"
+                           class="game-link">
+                            Explore Clash Royale <span>↗</span>
+                        </a>
                     </div>
                 </article>
 
             </div>
+
+            <p class="image-note">
+                Game artwork is loaded from external image hosts.
+                An internet connection is required to display it.
+            </p>
         </section>
 
-        <!-- PC Setups Showcase -->
-        <section id="pc-setups" class="section-card">
-            <h2>PC Hardware & Battlestations</h2>
-            <p class="subtitle">Clean ambient lighting, ultra-wide monitors, and high-tier hardware configurations inspiring my setup.</p>
-            
-            <div class="setup-grid">
-                <figure class="setup-card">
-                    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80" alt="RGB Gaming Setup with Curved Monitor">
-                    <figcaption>
-                        <h4>Minimalist RGB Battlestation</h4>
-                        <p>Dual-monitor curved desk setup with addressable ambient RGB backlighting and mechanical keyboard.</p>
-                    </figcaption>
-                </figure>
+        <!-- PC Setup Section -->
+        <section id="pc-setups" class="setup-section section-wrap">
+            <div class="section-heading">
+                <span class="eyebrow">THE ULTIMATE BATTLESTATION</span>
+                <h2>PC Hardware & <span class="accent">Setups</span></h2>
+                <p>
+                    A little inspiration for the perfect gaming and
+                    programming workspace.
+                </p>
+            </div>
 
-                <figure class="setup-card">
-                    <img src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=800&q=80" alt="Custom Water-cooled PC Rig">
-                    <figcaption>
-                        <h4>Custom Liquid-Cooled Rig</h4>
-                        <p>High-airflow glass case enclosure featuring custom hard-tubing liquid cooling loops for GPU and CPU temperatures.</p>
-                    </figcaption>
-                </figure>
+            <div class="setup-grid">
+                <article class="setup-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=1000&q=85"
+                        alt="Desktop computer and monitor gaming workspace"
+                        loading="lazy"
+                    >
+                    <div class="setup-overlay">
+                        <span class="setup-tag">01 / WORKSPACE</span>
+                        <h3>Minimalist Battlestation</h3>
+                        <p>
+                            A clean desk, immersive display, and
+                            distraction-free gaming environment.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="setup-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1000&q=85"
+                        alt="Custom gaming PC hardware setup"
+                        loading="lazy"
+                    >
+                    <div class="setup-overlay">
+                        <span class="setup-tag">02 / HARDWARE</span>
+                        <h3>Performance Rig</h3>
+                        <p>
+                            Powerful components, airflow, and a setup
+                            built for smooth gaming sessions.
+                        </p>
+                    </div>
+                </article>
             </div>
         </section>
+
+        <!-- Call to Action -->
+        <section class="closing-section">
+            <span class="eyebrow">GAME. CREATE. REPEAT.</span>
+            <h2>Thanks for visiting<br><span class="gradient-text">my gaming vault.</span></h2>
+            <a href="#home" class="btn btn-primary">Back to Top ↑</a>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Prakhar. All Rights Reserved. | Web Designing Lab (JCS 308/408) - Experiment 1</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <a href="#home" class="footer-logo">P<span>V</span></a>
+        <p>
+            © 2026 Prakhar. All Rights Reserved.
+            <span class="footer-divider">|</span>
+            Web Designing Lab — Experiment 1
+        </p>
+        <a href="#home" class="back-top">BACK TO TOP ↑</a>
     </footer>
 
 </body>

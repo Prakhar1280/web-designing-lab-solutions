@@ -1,113 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prakhar | CS & DS Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Prakhar's computer science and data science portfolio.">
+  <title>Prakhar | CS &amp; DS Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="page-glow glow-one" aria-hidden="true"></div>
+  <div class="page-glow glow-two" aria-hidden="true"></div>
 
-    <!-- Header & Boxed Navigation -->
-    <header>
-        <div class="nav-container">
-            <div class="brand">Prakhar<span>.dev</span></div>
-            <nav>
-                <ul>
-                    <li><a href="#about" class="nav-box">About</a></li>
-                    <li><a href="#education" class="nav-box">Education</a></li>
-                    <li><a href="#skills" class="nav-box">Skills</a></li>
-                    <li><a href="#projects" class="nav-box">Projects</a></li>
-                    <li><a href="#contact" class="nav-box">Contact</a></li>
-                </ul>
-            </nav>
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand" href="#top" aria-label="Prakhar home">Prakhar<span>.dev</span></a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about" class="nav-link active">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link nav-contact">Contact <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container" id="top">
+    <section id="about" class="hero section-card">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> COMPUTER SCIENCE &amp; DATA SCIENCE</div>
+        <h1>Hi, I'm <span>Prakhar.</span><br>Curious by nature.<br><span class="outline-text">Builder by choice.</span></h1>
+        <p class="hero-description">An undergraduate exploring database systems, development tools, and modern web experiences. I enjoy turning ideas into useful, well-crafted digital projects.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="button button-secondary" href="#contact">Let's connect</a>
         </div>
-    </header>
+        <div class="hero-meta"><span>📍 Noida, India</span><span class="meta-divider"></span><span>Always learning, always building</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-frame">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=85" alt="A close-up of colorful code on a monitor" fetchpriority="high">
+          <div class="image-shade"></div>
+          <div class="floating-chip chip-top"><span class="chip-icon">⌘</span><span><strong>Think</strong><small>Break it down</small></span></div>
+          <div class="floating-chip chip-bottom"><span class="chip-icon">{ }</span><span><strong>Build</strong><small>Make it work</small></span></div>
+          <div class="frame-caption"><span class="caption-line"></span> IDEAS INTO INTERFACES</div>
+        </div>
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+      </div>
+    </section>
 
-    <main class="main-container">
-        
-        <!-- Hero Section -->
-        <section id="about" class="card hero-section">
-            <div class="hero-content">
-                <span class="badge">Computer Science & Data Science</span>
-                <h1>Hi, I'm Prakhar 👋</h1>
-                <p class="lead">Undergraduate focused on database architecture, system environments, and modern web application development. Building scalable, performant software with modern toolchains.</p>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Code editor screen background">
-            </div>
-        </section>
+    <section id="education" class="content-section">
+      <div class="section-heading">
+        <div><span class="section-kicker">THE FOUNDATION</span><h2>Education<span class="accent-dot">.</span></h2></div>
+        <p>Building a strong foundation, one concept at a time.</p>
+      </div>
+      <div class="education-grid">
+        <article class="education-card">
+          <div class="education-image campus-image">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=80" alt="University campus building" loading="lazy">
+            <span class="image-label">UNDERGRADUATE</span>
+          </div>
+          <div class="education-body">
+            <div class="card-topline"><span class="date-pill">2025 — 2029</span><span class="card-index">01</span></div>
+            <h3>B.Tech in Computer Science &amp; Data Science</h3>
+            <p class="institution">JSS University, Noida</p>
+            <p class="card-description">Exploring core computer science, relational databases, and algorithmic data structures.</p>
+          </div>
+        </article>
+        <article class="education-card">
+          <div class="education-image school-image">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" alt="Students studying together" loading="lazy">
+            <span class="image-label">SENIOR SECONDARY</span>
+          </div>
+          <div class="education-body">
+            <div class="card-topline"><span class="date-pill">2024</span><span class="card-index">02</span></div>
+            <h3>Class 12th · CBSE</h3>
+            <p class="institution">Physics, Chemistry &amp; Mathematics</p>
+            <p class="card-description">Completed senior secondary education with a focus on analytical thinking and problem-solving.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <!-- Education Section with Institution Visuals -->
-        <section id="education" class="card">
-            <h2>Education Timeline</h2>
-            
-            <div class="edu-grid">
-                <!-- B.Tech Card -->
-                <div class="edu-card">
-                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="University Campus Building">
-                    <div class="edu-details">
-                        <span class="year-badge">2025 – 2029</span>
-                        <h3>B.Tech in Computer Science & Data Science</h3>
-                        <h4>JSS University, Noida</h4>
-                        <p>Specializing in core computer science, relational database engineering, and algorithmic data structures.</p>
-                    </div>
-                </div>
+    <section id="skills" class="content-section">
+      <div class="section-heading">
+        <div><span class="section-kicker">MY TOOLKIT</span><h2>Skills &amp; tools<span class="accent-dot">.</span></h2></div>
+        <p>Technologies I'm learning and using to bring ideas to life.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-image"><img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80" alt="Abstract database visualization" loading="lazy"><span class="skill-number">01</span></div>
+          <div class="skill-body"><div class="skill-title-row"><span class="skill-symbol">▤</span><h3>Databases</h3></div><p>Structuring information and working with relational data.</p><div class="tag-container"><span class="skill-tag featured-tag">PostgreSQL</span></div></div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-image"><img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80" alt="Terminal and command-line workspace" loading="lazy"><span class="skill-number">02</span></div>
+          <div class="skill-body"><div class="skill-title-row"><span class="skill-symbol">⌘</span><h3>Systems &amp; tools</h3></div><p>Working with development environments and technical workflows.</p><div class="tag-container"><span class="skill-tag">Linux</span><span class="skill-tag">LaTeX</span><span class="skill-tag">Git / GitHub</span></div></div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-image"><img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Web design workspace on a laptop" loading="lazy"><span class="skill-number">03</span></div>
+          <div class="skill-body"><div class="skill-title-row"><span class="skill-symbol">&lt;/&gt;</span><h3>Web engineering</h3></div><p>Creating responsive pages with clean structure and styling.</p><div class="tag-container"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span></div></div>
+        </article>
+      </div>
+    </section>
 
-                <!-- Class 12th Card -->
-                <div class="edu-card">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="High School Graduation Library">
-                    <div class="edu-details">
-                        <span class="year-badge">2024</span>
-                        <h3>Class 12th (Senior Secondary)</h3>
-                        <h4>CBSE Board</h4>
-                        <p>Completed higher secondary education with a major focus on Physics, Chemistry, and Mathematics.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="projects" class="content-section projects-section">
+      <div class="section-heading">
+        <div><span class="section-kicker">SELECTED WORK</span><h2>Projects<span class="accent-dot">.</span></h2></div>
+        <p>A couple of projects from my learning journey.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card project-featured">
+          <div class="project-art gaming-art"><span class="project-art-icon">✦</span><span class="project-art-label">01 / WEB DESIGN</span><div class="art-title">GAMING<br><span>VAULT</span></div><div class="art-grid-lines"></div></div>
+          <div class="project-body"><div class="project-topline"><span class="project-type">Portfolio website</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>Prakhar's Gaming Vault</h3><p>A gaming-themed portfolio concept with bold visuals, game cards, and a responsive layout.</p><div class="tag-container"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-art notes-art"><span class="project-art-icon">▤</span><span class="project-art-label">02 / REACT</span><div class="notes-window"><span></span><span></span><span></span><div class="notes-lines"></div><div class="notes-lines short"></div><div class="notes-lines"></div></div><div class="art-title notes-title">NOTES<span> / APP</span></div></div>
+          <div class="project-body"><div class="project-topline"><span class="project-type">Productivity app</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>React Notes App</h3><p>A simple notes-app project built while practising component-based UI development.</p><div class="tag-container"><span class="skill-tag">React</span><span class="skill-tag">JavaScript</span><span class="skill-tag">CSS</span></div></div>
+        </article>
+      </div>
+      <p class="project-note">This section can be updated with live demos and repository links as your projects are published.</p>
+    </section>
 
-<!-- Technical Skills Section with Images -->
-        <section id="skills" class="card">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                
-                <!-- Databases Card -->
-                <div class="skill-card">
-                    <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=600&q=80" alt="Database Visualization">
-                    <div class="skill-card-body">
-                        <h3>Databases</h3>
-                        <div class="tag-container">
-                            <span class="skill-tag highlighted">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
+    <section id="contact" class="contact-panel">
+      <div class="contact-decoration" aria-hidden="true">✳</div>
+      <div><span class="section-kicker">HAVE AN IDEA?</span><h2>Let's make something<br><span>meaningful.</span></h2><p>I'm always interested in learning, collaborating, and building something new.</p></div>
+      <a class="button button-light" href="mailto:your.email@example.com">Get in touch <span aria-hidden="true">↗</span></a>
+      <p class="email-note">Replace <strong>your.email@example.com</strong> in the HTML with your email address.</p>
+    </section>
+  </main>
 
-                <!-- Systems & Environments Card -->
-                <div class="skill-card">
-                    <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=600&q=80" alt="Linux Terminal Workspace">
-                    <div class="skill-card-body">
-                        <h3>Systems & Tools</h3>
-                        <div class="tag-container">
-                            <span class="skill-tag">Linux</span>
-                            <span class="skill-tag">LaTeX</span>
-                            <span class="skill-tag">Git / GitHub</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web Development Card -->
-                <div class="skill-card">
-                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Web Development Interface">
-                    <div class="skill-card-body">
-                        <h3>Web Engineering</h3>
-                        <div class="tag-container">
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+  <footer class="site-footer"><a class="brand footer-brand" href="#top">Prakhar<span>.dev</span></a><p>Designed with curiosity and a little bit of code.</p><a class="back-to-top" href="#top">Back to top ↑</a><small>© <span id="year">2026</span> Prakhar. Built to keep evolving.</small></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
